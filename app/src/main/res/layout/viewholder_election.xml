@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="election"
+            type="com.example.android.politicalpreparedness.network.models.Election" />
+        <variable
+            name="electionClickListener"
+            type="com.example.android.politicalpreparedness.election.adapter.ElectionListener" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:onClick="@{()->electionClickListener.onClick(election)}">
+
+    <TextView
+        android:id="@+id/electionItemViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{election.name}"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:text="Election title preview" />
+
+    <TextView
+        android:id="@+id/electionItemViewDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text='@{election.electionDay.toString().replace("GMT+02:00","EDT")}'
+        tools:text="Preview date" />
+</LinearLayout>
+</layout>
