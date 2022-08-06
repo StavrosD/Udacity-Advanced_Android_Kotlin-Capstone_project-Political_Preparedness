@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@{election.name}"
-        android:textSize="24sp"
+        android:textSize="@dimen/text_size"
         android:textStyle="bold"
         tools:text="Election title preview" />
 
@@ -29,7 +29,7 @@
         android:id="@+id/electionItemViewDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
+        android:textSize="@dimen/text_size"
         android:text='@{election.electionDay.toString().replace("GMT+02:00","EDT")}'
         tools:text="Preview date" />
 </LinearLayout>

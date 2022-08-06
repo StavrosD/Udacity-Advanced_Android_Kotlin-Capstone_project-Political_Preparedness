@@ -20,9 +20,9 @@
             android:id="@+id/representativePhoto"
             profileImage="@{representative.official.photoUrl}"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_height="@dimen/match_constraints"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
             android:contentDescription="@string/representative_image"
             app:layout_constraintBottom_toBottomOf="@+id/tv_representative_party"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,21 +31,21 @@
 
         <TextView
             android:id="@+id/tv_representative_title"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/match_constraints"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             app:layout_constraintStart_toEndOf="@+id/representativePhoto"
             app:layout_constraintTop_toTopOf="parent"
             android:text="@{representative.office.name}"
-            tools:text="Title" />
+            tools:text="@string/representative_title" />
 
         <TextView
             android:id="@+id/tv_representative_name"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/match_constraints"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="@dimen/margin_normal"
             android:text="@{representative.official.name}"
             app:layout_constraintEnd_toStartOf="@+id/wwwIcon"
             app:layout_constraintStart_toStartOf="@+id/tv_representative_title"
@@ -54,7 +54,7 @@
 
         <TextView
             android:id="@+id/tv_representative_party"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/match_constraints"
             android:layout_height="wrap_content"
             android:text="@{representative.official.party}"
             app:layout_constraintEnd_toEndOf="@+id/tv_representative_name"
@@ -64,11 +64,11 @@
 
         <ImageView
             android:id="@+id/wwwIcon"
-            android:layout_width="42dp"
-            android:layout_height="0dp"
+            android:layout_width="@dimen/icon_width"
+            android:layout_height="@dimen/match_constraints"
 
 
-            android:layout_marginEnd="4dp"
+            android:layout_marginEnd="@dimen/icon_margin"
             android:contentDescription="@string/web"
             app:layout_constraintBottom_toBottomOf="@+id/facebookIcon"
             app:layout_constraintEnd_toStartOf="@+id/facebookIcon"
@@ -77,9 +77,9 @@
 
         <ImageView
             android:id="@+id/facebookIcon"
-            android:layout_width="42dp"
-            android:layout_height="0dp"
-            android:layout_marginEnd="4dp"
+            android:layout_width="@dimen/icon_width"
+            android:layout_height="@dimen/match_constraints"
+            android:layout_marginEnd="@dimen/icon_margin"
             android:contentDescription="@string/facebook"
             app:layout_constraintBottom_toBottomOf="@+id/twitterIcon"
             app:layout_constraintEnd_toStartOf="@+id/twitterIcon"
@@ -88,9 +88,9 @@
 
         <ImageView
             android:id="@+id/twitterIcon"
-            android:layout_width="42dp"
-            android:layout_height="0dp"
-            android:layout_marginEnd="8dp"
+            android:layout_width="@dimen/icon_width"
+            android:layout_height="@dimen/match_constraints"
+            android:layout_marginEnd="@dimen/margin_normal"
             android:contentDescription="@string/twitter"
             app:layout_constraintBottom_toBottomOf="@+id/tv_representative_party"
             app:layout_constraintEnd_toEndOf="parent"

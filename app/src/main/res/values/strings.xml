@@ -27,6 +27,8 @@
     <string name="city">City</string>
     <string name="zip">Zip</string>
     <string name="representative_search">Representative Search</string>
+    <string name="preview_date">12 November 2055</string>
+    <string name="representative_title">Title</string>
 
     <!--  COMPLETED: Add necessary string values -->
 

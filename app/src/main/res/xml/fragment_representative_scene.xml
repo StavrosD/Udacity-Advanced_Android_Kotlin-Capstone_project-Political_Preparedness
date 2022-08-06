@@ -7,7 +7,7 @@
             android:id="@+id/search_title"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="1000dp" />
+            android:layout_marginTop="@dimen/animation_start_margin" />
 
 
     </ConstraintSet>
@@ -17,7 +17,7 @@
             android:id="@+id/search_title"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_editor_absoluteY="32dp" />
+            app:layout_editor_absoluteY="@dimen/margin_normal" />
 
     </ConstraintSet>
     <Transition

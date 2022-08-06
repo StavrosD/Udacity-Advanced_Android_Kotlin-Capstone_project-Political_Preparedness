@@ -23,7 +23,7 @@
         <androidx.constraintlayout.motion.widget.MotionLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="8dp"
+            android:layout_margin="@dimen/margin_normal"
             app:layoutDescription="@xml/fragment_representative_scene">
 
 
@@ -41,7 +41,7 @@
             <EditText
                 android:id="@+id/address_line_1"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="@dimen/edittext_height"
                 android:autofillHints=""
                 android:hint="@string/adress_sample_text"
                 android:inputType="textPostalAddress"
@@ -55,7 +55,7 @@
             <EditText
                 android:id="@+id/address_line_2"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/text_view_height"
+                android:layout_height="@dimen/edittext_height"
                 android:autofillHints=""
                 android:hint="@string/address"
                 android:inputType="textPostalAddress"
@@ -68,8 +68,8 @@
             <!-- COMPLETED: Add visual styling and content -->
             <EditText
                 android:id="@+id/city"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/match_constraints"
+                android:layout_height="@dimen/edittext_height"
                 android:autofillHints=""
                 android:hint="@string/city"
                 android:inputType="textPostalAddress"
@@ -85,8 +85,8 @@
             <Spinner
                 android:id="@+id/state"
                 stateValue="@{viewModel.address.state}"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_width="@dimen/match_constraints"
+                android:layout_height="@dimen/match_constraints"
                 android:autofillHints=".AUTOFILL_HINT_POSTAL_ADDRESS_REGION"
                 android:contentDescription="@string/state_sample_text"
                 android:inputType="textPostalAddress"
@@ -99,13 +99,13 @@
             <!-- COMPLETED: Add visual styling and content -->
             <EditText
                 android:id="@+id/zip"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/match_constraints"
+                android:layout_height="@dimen/edittext_height"
                 android:autofillHints=""
                 android:hint="@string/zip"
                 android:inputType="number"
                 android:maxLength="5"
-                android:minHeight="48dp"
+                android:minHeight="@dimen/edittext_height"
                 android:text="@={viewModel.address.zip}"
                 app:layout_constraintEnd_toEndOf="@id/city"
                 app:layout_constraintStart_toStartOf="parent"
@@ -122,7 +122,7 @@
                 android:clickable="@{viewModel.showRepresentativesLoading ? false : true}"
                 android:text="@string/find_my_representatives_button"
                 app:layout_constraintTop_toBottomOf="@id/zip"
-                motion:layout_editor_absoluteX="8dp" />
+               />
 
             <!-- COMPLETED: Add visual styling and content -->
 
@@ -131,12 +131,12 @@
                 android:id="@+id/button_location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/margin_normal"
                 android:height="@dimen/button_height"
                 android:clickable="@{viewModel.showRepresentativesLoading ? false : true}"
                 android:text="@string/use_my_location_button"
                 app:layout_constraintTop_toBottomOf="@id/button_search"
-                motion:layout_editor_absoluteX="8dp" />
+                 />
 
             <TextView
                 android:id="@+id/representative_title"
@@ -155,8 +155,8 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="8dp"
+                android:layout_height="@dimen/match_constraints"
+                android:layout_marginTop="@dimen/margin_normal"
                 android:gravity="center"
                 android:textAlignment="center"
                 android:visibility="@{viewModel.showRepresentativesLoading ? View.GONE : View.VISIBLE}"
@@ -174,11 +174,11 @@
             android:id="@+id/progressBarRepresentatives"
             style="?android:attr/progressBarStyle"
             android:layout_width="match_parent"
-            android:layout_height="64dp"
+            android:layout_height="@dimen/progress_bar_height"
             android:visibility="@{viewModel.showRepresentativesLoading ? View.VISIBLE : View.GONE}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="@dimen/bias_center"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>

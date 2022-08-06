@@ -4,5 +4,14 @@
 
     <!-- COMPLETED: Add necessary dimension values -->s
     <dimen name="button_height">48dp</dimen>
-    <dimen name="text_view_height">48dp</dimen>
+    <dimen name="margin_normal">8dp</dimen>
+    <dimen name="edittext_height">48dp</dimen>
+    <dimen name="match_constraints">0dp</dimen>
+    <dimen name="progress_bar_height">64dp</dimen>
+    <dimen name="margin_bottom">32dp</dimen>
+    <dimen name="bias_center">0.5</dimen>
+    <dimen name="text_size">24sp</dimen>
+    <dimen name="icon_width">42dp</dimen>
+    <dimen name="icon_margin">4dp</dimen>
+    <dimen name="animation_start_margin">1000dp</dimen>
 </resources>

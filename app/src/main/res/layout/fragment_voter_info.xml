@@ -37,18 +37,18 @@
             android:id="@+id/election_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/default_padding"
+            android:layout_margin="@dimen/margin_normal"
             android:text='@{viewModel.election.electionDay.toString().replace("GMT+02:00","EDT")}'
             app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="8dp"
-            tools:text="12 November 2055" />
+            tools:layout_editor_absoluteX="@dimen/margin_normal"
+            tools:text="@string/preview_date" />
 
         <!-- COMPLETED: Add visual styling and content -->
         <TextView
             android:id="@+id/state_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/margin_normal"
             android:text="@string/election_information"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             app:layout_constraintStart_toStartOf="@id/election_date"
@@ -87,8 +87,8 @@
             android:id="@+id/state_correspondence_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="88dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
             app:layout_constraintStart_toStartOf="@id/election_date"
             app:layout_constraintTop_toBottomOf="@id/state_ballot" />
 
@@ -102,17 +102,17 @@
         <!-- COMPLETED: Add button to save election to Room -->
         <Button
             android:id="@+id/bn_follow"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/match_constraints"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_normal"
             android:contentDescription="@{viewModel.electionSavedStatus ? @string/unfollow_election : @string/follow_election}"
             android:onClick="@{()->viewModel.saveButtonClick()}"
             android:text="@{viewModel.electionSavedStatus ? @string/unfollow_election : @string/follow_election}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="@dimen/bias_center"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="SpeakableTextPresentCheck" />
     </androidx.constraintlayout.widget.ConstraintLayout>
